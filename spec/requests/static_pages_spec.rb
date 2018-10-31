@@ -2,10 +2,10 @@ require 'spec_helper'
 require 'rails_helper'
 
 describe "Static pages" do
-
+    let(:content_error) {""}
   describe "Home page" do
 
-    it "should have the content 'Sample App'" do
+    it "should have the content Sample App" do
       visit '/static_pages/home'
       expect(page).to have_content('Sample App')
     end
@@ -37,6 +37,11 @@ describe "Static pages" do
     end
   end  
 
+  describe "Contact" do
+    it "Should have the title 'Contact'" do
+        visit 'static_pages/contact'
+        expect(page).to have_title("Contact")
+    end
 
-
+  end
 end
