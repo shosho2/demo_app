@@ -1,6 +1,7 @@
 module ApplicationHelper
+    #constructs a title from basic and page parts
     def full_title (page_title, base_title)
-        #base_title = "Demo app for dumm"
+        
         if page_title.empty? 
             base_title
         else 
